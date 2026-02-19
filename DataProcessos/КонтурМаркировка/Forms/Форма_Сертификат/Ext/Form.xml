@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Ссылка.Description</DataPath>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ОтпечатокСертификата" id="4">
+			<DataPath>Ссылка.ОтпечатокСертификата</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отпечаток</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ОтпечатокСертификатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОтпечатокСертификатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ВидСертификата" id="25">
+			<DataPath>Ссылка.ВидСертификата</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выдан</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ВидСертификатаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ВидСертификатаРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<UsualGroup name="ГруппаДатаВыдачи" id="28">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаВыдачиРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<InputField name="ДатаВыдачи" id="7">
+					<DataPath>Ссылка.ДатаВыдачи</DataPath>
+					<ContextMenu name="ДатаВыдачиКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДатаВыдачиРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="ДатаОкончания" id="10">
+					<DataPath>Ссылка.ДатаОкончания</DataPath>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="12"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="НаименованиеОрганизации" id="13">
+			<DataPath>Ссылка.НаименованиеОрганизации</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НаименованиеОрганизацииКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="НаименованиеОрганизацииРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<UsualGroup name="ГруппаИНН" id="33">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИННРасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<InputField name="ИНН" id="19">
+					<DataPath>Ссылка.ИНН</DataPath>
+					<ContextMenu name="ИННКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="КПП" id="30">
+					<DataPath>Ссылка.КПП</DataPath>
+					<ContextMenu name="КППКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="КППРасширеннаяПодсказка" id="32"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ФИО" id="16">
+			<DataPath>Ссылка.ФИО</DataPath>
+			<ContextMenu name="ФИОКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ФИОРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Должность" id="22">
+			<DataPath>Ссылка.Должность</DataPath>
+			<ContextMenu name="ДолжностьКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Издатель" id="35">
+			<DataPath>Ссылка.Издатель</DataPath>
+			<ContextMenu name="ИздательКонтекстноеМеню" id="36"/>
+			<ExtendedTooltip name="ИздательРасширеннаяПодсказка" id="37"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурМаркировка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Ссылка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КонтурМаркировка_Сертификаты</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Ссылка">
+			<Type>
+				<v8:Type>cfg:CatalogRef.КонтурМаркировка_Сертификаты</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

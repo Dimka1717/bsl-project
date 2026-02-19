@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Шаблоны этикеток (Контур.Маркировка)</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Кнопка_Выбрать" id="21">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="Кнопка_ВыбратьРасширеннаяПодсказка" id="22"/>
+			</Button>
+			<Button name="Кнопка_Добавить" id="17">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="Кнопка_ДобавитьРасширеннаяПодсказка" id="18"/>
+			</Button>
+			<Button name="Кнопка_Скопировать" id="31">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>0</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="Кнопка_СкопироватьРасширеннаяПодсказка" id="32"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="45">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="46"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="47">
+				<ChildItems>
+					<Popup name="Меню_ДобавитьИзПримера" id="39">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Добавить из примера</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="Меню_ДобавитьИзПримераРасширеннаяПодсказка" id="40"/>
+						<ChildItems>
+							<Button name="Кнопка_ДобавитьИзПримераТоварнуюЭтикетку" id="41">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ДобавитьИзПримераТоварнуюЭтикетку</CommandName>
+								<ExtendedTooltip name="Кнопка_ДобавитьИзПримераТоварнуюЭтикеткуРасширеннаяПодсказка" id="42"/>
+							</Button>
+							<Button name="Кнопка_ДобавитьИзПримераТранспортнуюЭтикетку" id="43">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ДобавитьИзПримераТранспортнуюЭтикетку</CommandName>
+								<ExtendedTooltip name="Кнопка_ДобавитьИзПримераТранспортнуюЭтикеткуРасширеннаяПодсказка" id="44"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="48"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="49">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="52">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="55">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="ValueChoice">СписокВыборЗначения</Event>
+				<Event name="Selection">СписокВыбор</Event>
+				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+				<Event name="BeforeRowChange">СписокПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СписокНаименование" id="58">
+					<DataPath>Список.Description</DataPath>
+					<ContextMenu name="СписокНаименованиеКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="СписокНаименованиеРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<LabelField name="СписокТипЭтикетки" id="61">
+					<DataPath>Список.ТипЭтикетки</DataPath>
+					<ContextMenu name="СписокТипЭтикеткиКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="СписокТипЭтикеткиРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<LabelField name="СписокШиринаСтраницы" id="64">
+					<DataPath>Список.ШиринаСтраницы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ширина (мм)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СписокШиринаСтраницыКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="СписокШиринаСтраницыРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<LabelField name="СписокВысотаСтраницы" id="67">
+					<DataPath>Список.ВысотаСтраницы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Высота (мм)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СписокВысотаСтраницыКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="СписокВысотаСтраницыРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+				<LabelField name="СписокРазмерЯчейки" id="70">
+					<DataPath>Список.РазмерЯчейки</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СписокРазмерЯчейкиКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="СписокРазмерЯчейкиРасширеннаяПодсказка" id="72"/>
+				</LabelField>
+				<LabelField name="СписокОтветственный" id="73">
+					<DataPath>Список.Ответственный</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СписокОтветственныйКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="СписокОтветственныйРасширеннаяПодсказка" id="75"/>
+				</LabelField>
+				<LabelField name="СписокКомментарий" id="76">
+					<DataPath>Список.Комментарий</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СписокКомментарийКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="СписокКомментарийРасширеннаяПодсказка" id="78"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурМаркировка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Список" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список шаблонов этикеток</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.КонтурМаркировка_ШаблоныЭтикеток</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьИзПримераТоварнуюЭтикетку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарную этикетку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить из примера товарную этикетку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьИзПримераТоварнуюЭтикетку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьИзПримераТранспортнуюЭтикетку" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Транспортную этикетку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить из примера транспортную этикетку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьИзПримераТранспортнуюЭтикетку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="РежимВыбора">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

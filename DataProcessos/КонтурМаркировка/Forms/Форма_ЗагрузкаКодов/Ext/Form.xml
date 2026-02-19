@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Контур.Маркировка</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<AutoFillCheck>false</AutoFillCheck>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Кнопка_ЗагрузитьКоды" id="4">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗагрузитьКоды</CommandName>
+				<ExtendedTooltip name="Кнопка_ЗагрузитьКодыРасширеннаяПодсказка" id="5"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Подсказка" id="9">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПодсказкаРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаПодсказки" id="11">
+					<Width>2</Width>
+					<Height>1</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<SkipOnInput>true</SkipOnInput>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="КартинкаПодсказкиКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="КартинкаПодсказкиРасширеннаяПодсказка" id="13"/>
+				</PictureDecoration>
+				<Pages name="ВариантыПодсказок" id="27">
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ВариантыПодсказокРасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<Page name="БезКриптохвостов" id="34">
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="БезКриптохвостовРасширеннаяПодсказка" id="35"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстПодсказки_БезКриптохвостов" id="36">
+									<Enabled>false</Enabled>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SkipOnInput>true</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Коды будут добавлены без крипто-хвостов</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекстПодсказки_БезКриптохвостовКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ТекстПодсказки_БезКриптохвостовРасширеннаяПодсказка" id="38"/>
+								</LabelDecoration>
+							</ChildItems>
+						</Page>
+						<Page name="СКриптохвостами" id="29">
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СКриптохвостамиРасширеннаяПодсказка" id="30"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстПодсказки_СКриптохвостами" id="31">
+									<Enabled>false</Enabled>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SkipOnInput>true</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Коды будут добавлены с крипто-хвостами</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекстПодсказки_СКриптохвостамиКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="ТекстПодсказки_СКриптохвостамиРасширеннаяПодсказка" id="33"/>
+								</LabelDecoration>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСпособыЗагрузки" id="41">
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСпособыЗагрузкиРасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<Page name="СтраницаТекст" id="45">
+					<ExtendedTooltip name="СтраницаТекстРасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<InputField name="ТекстСКодами" id="58">
+							<DataPath>ТекстСКодами</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ТекстСКодамиКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ТекстСКодамиРасширеннаяПодсказка" id="60"/>
+							<Events>
+								<Event name="EditTextChange">ТекстСКодамиИзменениеТекстаРедактирования</Event>
+								<Event name="TextEditEnd">ТекстСКодамиОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаТабличныйДокумент" id="43">
+					<ExtendedTooltip name="СтраницаТабличныйДокументРасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<SpreadSheetDocumentField name="ТабличныйДокумент" id="1">
+							<DataPath>ТабличныйДокумент</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<CommandSet>
+								<ExcludedCommand>AlignCenter</ExcludedCommand>
+								<ExcludedCommand>AlignDrawingBottom</ExcludedCommand>
+								<ExcludedCommand>AlignDrawingCenter</ExcludedCommand>
+								<ExcludedCommand>AlignDrawingLeft</ExcludedCommand>
+								<ExcludedCommand>AlignDrawingMiddle</ExcludedCommand>
+								<ExcludedCommand>AlignDrawingRight</ExcludedCommand>
+								<ExcludedCommand>AlignDrawingTop</ExcludedCommand>
+								<ExcludedCommand>AlignJustify</ExcludedCommand>
+								<ExcludedCommand>AlignLeft</ExcludedCommand>
+								<ExcludedCommand>AlignRight</ExcludedCommand>
+								<ExcludedCommand>BackColor</ExcludedCommand>
+								<ExcludedCommand>BlackAndWhiteView</ExcludedCommand>
+								<ExcludedCommand>Bold</ExcludedCommand>
+								<ExcludedCommand>BorderAll</ExcludedCommand>
+								<ExcludedCommand>BorderBottom</ExcludedCommand>
+								<ExcludedCommand>BorderColor</ExcludedCommand>
+								<ExcludedCommand>BorderInside</ExcludedCommand>
+								<ExcludedCommand>BorderLeft</ExcludedCommand>
+								<ExcludedCommand>BorderNone</ExcludedCommand>
+								<ExcludedCommand>BorderOutline</ExcludedCommand>
+								<ExcludedCommand>BorderRight</ExcludedCommand>
+								<ExcludedCommand>BorderTop</ExcludedCommand>
+								<ExcludedCommand>BringDrawingForward</ExcludedCommand>
+								<ExcludedCommand>BringDrawingToFront</ExcludedCommand>
+								<ExcludedCommand>ClearAll</ExcludedCommand>
+								<ExcludedCommand>ClearContent</ExcludedCommand>
+								<ExcludedCommand>CollapseAllGroups</ExcludedCommand>
+								<ExcludedCommand>ColumnWidth</ExcludedCommand>
+								<ExcludedCommand>CombineToGroup</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>DeleteColumns</ExcludedCommand>
+								<ExcludedCommand>DeleteComment</ExcludedCommand>
+								<ExcludedCommand>DeleteRows</ExcludedCommand>
+								<ExcludedCommand>DistributeDrawingsHorizontally</ExcludedCommand>
+								<ExcludedCommand>DistributeDrawingsVertically</ExcludedCommand>
+								<ExcludedCommand>Edit</ExcludedCommand>
+								<ExcludedCommand>Ellipse</ExcludedCommand>
+								<ExcludedCommand>EqualDrawingHeight</ExcludedCommand>
+								<ExcludedCommand>EqualDrawingSize</ExcludedCommand>
+								<ExcludedCommand>EqualDrawingWidth</ExcludedCommand>
+								<ExcludedCommand>ExpandAllGroups</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>FindNext</ExcludedCommand>
+								<ExcludedCommand>FindPrevious</ExcludedCommand>
+								<ExcludedCommand>FixTable</ExcludedCommand>
+								<ExcludedCommand>Font</ExcludedCommand>
+								<ExcludedCommand>GoToCell</ExcludedCommand>
+								<ExcludedCommand>Group</ExcludedCommand>
+								<ExcludedCommand>HeaderFooter</ExcludedCommand>
+								<ExcludedCommand>Hide</ExcludedCommand>
+								<ExcludedCommand>InsertColumnsLeft</ExcludedCommand>
+								<ExcludedCommand>InsertColumnsRight</ExcludedCommand>
+								<ExcludedCommand>InsertComment</ExcludedCommand>
+								<ExcludedCommand>InsertPageBreak</ExcludedCommand>
+								<ExcludedCommand>InsertRows</ExcludedCommand>
+								<ExcludedCommand>InsertRowsBottom</ExcludedCommand>
+								<ExcludedCommand>InsertRowsTop</ExcludedCommand>
+								<ExcludedCommand>Italic</ExcludedCommand>
+								<ExcludedCommand>Line</ExcludedCommand>
+								<ExcludedCommand>Merge</ExcludedCommand>
+								<ExcludedCommand>Names</ExcludedCommand>
+								<ExcludedCommand>NextComment</ExcludedCommand>
+								<ExcludedCommand>PageSetup</ExcludedCommand>
+								<ExcludedCommand>PageViewMode</ExcludedCommand>
+								<ExcludedCommand>PasteFromClipboard</ExcludedCommand>
+								<ExcludedCommand>Picture</ExcludedCommand>
+								<ExcludedCommand>Preview</ExcludedCommand>
+								<ExcludedCommand>PreviousComment</ExcludedCommand>
+								<ExcludedCommand>Print</ExcludedCommand>
+								<ExcludedCommand>PrintImmediately</ExcludedCommand>
+								<ExcludedCommand>Properties</ExcludedCommand>
+								<ExcludedCommand>Rectangle</ExcludedCommand>
+								<ExcludedCommand>Redo</ExcludedCommand>
+								<ExcludedCommand>RemoveFromGroup</ExcludedCommand>
+								<ExcludedCommand>RemoveName</ExcludedCommand>
+								<ExcludedCommand>RemovePageBreak</ExcludedCommand>
+								<ExcludedCommand>RemovePrintArea</ExcludedCommand>
+								<ExcludedCommand>RemoveRepeatOnEachPage</ExcludedCommand>
+								<ExcludedCommand>RepeatOnEachPage</ExcludedCommand>
+								<ExcludedCommand>RowHeight</ExcludedCommand>
+								<ExcludedCommand>Save</ExcludedCommand>
+								<ExcludedCommand>SaveAs</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>SendDrawingBackward</ExcludedCommand>
+								<ExcludedCommand>SendDrawingToBack</ExcludedCommand>
+								<ExcludedCommand>SetName</ExcludedCommand>
+								<ExcludedCommand>SetPrintArea</ExcludedCommand>
+								<ExcludedCommand>Show</ExcludedCommand>
+								<ExcludedCommand>ShowCellNames</ExcludedCommand>
+								<ExcludedCommand>ShowComments</ExcludedCommand>
+								<ExcludedCommand>ShowGrid</ExcludedCommand>
+								<ExcludedCommand>ShowGroups</ExcludedCommand>
+								<ExcludedCommand>ShowHeaders</ExcludedCommand>
+								<ExcludedCommand>ShowRowAndColumnNames</ExcludedCommand>
+								<ExcludedCommand>SplitCell</ExcludedCommand>
+								<ExcludedCommand>Text</ExcludedCommand>
+								<ExcludedCommand>TextColor</ExcludedCommand>
+								<ExcludedCommand>ThickBorderBottom</ExcludedCommand>
+								<ExcludedCommand>ThickBorderOutline</ExcludedCommand>
+								<ExcludedCommand>ThickBorderTop</ExcludedCommand>
+								<ExcludedCommand>Underline</ExcludedCommand>
+								<ExcludedCommand>Undo</ExcludedCommand>
+								<ExcludedCommand>Ungroup</ExcludedCommand>
+							</CommandSet>
+							<ShowGrid>true</ShowGrid>
+							<ShowHeaders>true</ShowHeaders>
+							<HorizontalScrollBar>false</HorizontalScrollBar>
+							<Edit>true</Edit>
+							<ContextMenu name="ТабличныйДокументКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ТабличныйДокументРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="OnActivate">ТабличныйДокументПриАктивизации</Event>
+							</Events>
+						</SpreadSheetDocumentField>
+						<UsualGroup name="ГруппаПолныеКоды" id="20">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПолныеКодыРасширеннаяПодсказка" id="21"/>
+							<ChildItems>
+								<CheckBoxField name="ЗагружатьПолныеКоды" id="17">
+									<DataPath>ЗагружатьПолныеКоды</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗагружатьПолныеКодыКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ЗагружатьПолныеКодыРасширеннаяПодсказка" id="19"/>
+									<Events>
+										<Event name="OnChange">ЗагружатьПолныеКодыПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="СписокЭквивалентовРазделителяGS1" id="24">
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Эквиваленты разделителя GS1</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="СписокЭквивалентовРазделителяGS1КонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="СписокЭквивалентовРазделителяGS1РасширеннаяПодсказка" id="26"/>
+									<Events>
+										<Event name="Click">СписокЭквивалентовРазделителяGS1Нажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CheckBoxField name="УдалитьСтарыеКоды" id="6">
+			<DataPath>УдалитьСтарыеКоды</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="УдалитьСтарыеКодыКонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="УдалитьСтарыеКодыРасширеннаяПодсказка" id="8"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="65">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурМаркировка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТабличныйДокумент" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличный документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УдалитьСтарыеКоды" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить коды перед добавлением</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагружатьПолныеКоды" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать полные коды</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокЭквивалентовРазделителяGS1" id="62">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимСканера" id="69">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим сканера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимСканераВключен" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим сканера включен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстСКодами" id="63">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДляУдаления" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для удаления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьКоды" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить коды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьКоды</Action>
+		</Command>
+	</Commands>
+</Form>

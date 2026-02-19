@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<DataProcessor uuid="314cebba-27e3-4633-a6dc-1e06e0b46544">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.КонтурМаркировка_Плагин" category="Object">
+				<xr:TypeId>521021ed-27c6-442a-8b5e-d47dccdc9287</xr:TypeId>
+				<xr:ValueId>9b9a7b73-ae69-4900-bc5d-8c523b16bb78</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.КонтурМаркировка_Плагин" category="Manager">
+				<xr:TypeId>8dc8d216-6d64-43c4-9063-17ffdbfac19a</xr:TypeId>
+				<xr:ValueId>8eddd419-5e66-497d-a999-f94c13db99ec</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>КонтурМаркировка_Плагин</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Плагин (Контур.Маркировка)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Контур.Плагин для 1С</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>МодульКлиента</Form>
+			<Template>Barcode_zip</Template>
+			<Template>KonturPlugin_zip</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

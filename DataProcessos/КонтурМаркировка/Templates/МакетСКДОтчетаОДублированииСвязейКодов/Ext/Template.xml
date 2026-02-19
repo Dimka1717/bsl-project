@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПорцияЗаписей</dataPath>
+			<field>ПорцияЗаписей</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючИнформацииОКоде</dataPath>
+			<field>КлючИнформацииОКоде</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючКода</dataPath>
+			<field>КлючКода</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючСтатусаКода</dataPath>
+			<field>КлючСтатусаКода</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючАгрегата</dataPath>
+			<field>КлючАгрегата</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	МИНИМУМ(СвязиКлючейКодов.ПорцияЗаписей) КАК ПорцияЗаписей,
+	СвязиКлючейКодов.КлючКода КАК КлючКода
+ПОМЕСТИТЬ НеуникальныеКлючи
+ИЗ
+	РегистрСведений.КонтурМаркировка_СвязиКлючейКодов КАК СвязиКлючейКодов
+
+СГРУППИРОВАТЬ ПО
+	СвязиКлючейКодов.КлючКода
+
+ИМЕЮЩИЕ
+	КОЛИЧЕСТВО(СвязиКлючейКодов.КлючКода) &gt; 1
+
+ИНДЕКСИРОВАТЬ ПО
+	ПорцияЗаписей,
+	КлючКода
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СвязиКлючейКодов.ПорцияЗаписей,
+	СвязиКлючейКодов.КлючКода,
+	СвязиКлючейКодов.КлючАгрегата,
+	СвязиКлючейКодов.КлючСтатусаКода,
+	СвязиКлючейКодов.КлючИнформацииОКоде
+ИЗ
+	НеуникальныеКлючи КАК НеуникальныеКлючи
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КонтурМаркировка_СвязиКлючейКодов КАК СвязиКлючейКодов
+		ПО НеуникальныеКлючи.КлючКода = СвязиКлючейКодов.КлючКода
+			И НеуникальныеКлючи.ПорцияЗаписей = СвязиКлючейКодов.ПорцияЗаписей</query>
+	</dataSet>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КлючАгрегата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КлючИнформацииОКоде</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КлючКода</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КлючСтатусаКода</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПорцияЗаписей</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

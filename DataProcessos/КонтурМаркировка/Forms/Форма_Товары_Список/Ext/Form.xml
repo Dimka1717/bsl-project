@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Товары (Контур.Маркировка)</v8:content>
+		</v8:item>
+	</Title>
+	<Width>80</Width>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтбор" id="39">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<InputField name="ПодборОрганизация" id="36">
+					<DataPath>ПодборПроизводитель</DataPath>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ПодборОрганизацияКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ПодборОрганизацияРасширеннаяПодсказка" id="52"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Список" id="1">
+			<ChoiceMode>true</ChoiceMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="Кнопка_Выбрать" id="76">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.Command.ВыбратьТовар</CommandName>
+						<ExtendedTooltip name="Кнопка_ВыбратьРасширеннаяПодсказка" id="77"/>
+					</Button>
+					<Button name="Кнопка_Добавить" id="78">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьТовар</CommandName>
+						<ExtendedTooltip name="Кнопка_ДобавитьРасширеннаяПодсказка" id="79"/>
+					</Button>
+					<Button name="Кнопка_Изменить" id="72">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.Список.StandardCommand.Change</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="Кнопка_ИзменитьРасширеннаяПодсказка" id="73"/>
+					</Button>
+					<Button name="Кнопка_Обновить" id="74">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.Список.StandardCommand.Refresh</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="Кнопка_ОбновитьРасширеннаяПодсказка" id="75"/>
+					</Button>
+					<Popup name="СписокТоваровГруппаЗагрузить" id="85">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Загрузить новые</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокТоваровГруппаЗагрузитьРасширеннаяПодсказка" id="86"/>
+						<ChildItems>
+							<Button name="Кнопка_ЗагрузитьИзФайла" id="50">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
+								<ExtendedTooltip name="Кнопка_ЗагрузитьИзФайлаРасширеннаяПодсказка" id="55"/>
+							</Button>
+							<Button name="Кнопка_ЗагрузитьИзНоменклатуры1С" id="87">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗагрузитьИзНоменклатуры1С</CommandName>
+								<ExtendedTooltip name="Кнопка_ЗагрузитьИзНоменклатуры1СРасширеннаяПодсказка" id="88"/>
+							</Button>
+							<Button name="Кнопка_ЗагрузитьПоДаннымДиадок" id="93">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗагрузитьПоДаннымДиадок</CommandName>
+								<ExtendedTooltip name="Кнопка_ЗагрузитьПоДаннымДиадокРасширеннаяПодсказка" id="94"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Button name="Кнопка_ОбновитьИзНациональногоКаталога" id="89">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОбновитьИзНациональногоКаталога</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="Кнопка_ОбновитьИзНациональногоКаталогаРасширеннаяПодсказка" id="90"/>
+					</Button>
+					<Button name="Кнопка_ОткрытьОтчетПоВиртуальномуСкладу" id="91">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьОтчетПоВиртуальномуСкладу</CommandName>
+						<ExtendedTooltip name="Кнопка_ОткрытьОтчетПоВиртуальномуСкладуРасширеннаяПодсказка" id="92"/>
+					</Button>
+					<Button name="Гиперссылка_ОткрытьТоварыВСО" id="83">
+						<Type>CommandBarHyperlink</Type>
+						<CommandName>Form.Command.ОткрытьТоварыВСО</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список товаров оборудования</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="Гиперссылка_ОткрытьТоварыВСОРасширеннаяПодсказка" id="84"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="56"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="57">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="58"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="60">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="61"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="63">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="64"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="65"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+				<Event name="BeforeRowChange">СписокПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СписокGTIN" id="17">
+					<DataPath>Список.GTIN</DataPath>
+					<ContextMenu name="СписокGTINКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СписокGTINРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+				<LabelField name="СписокНаименованиеТовара" id="80">
+					<DataPath>Список.НаименованиеТовара</DataPath>
+					<ContextMenu name="СписокНаименованиеТовараКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="СписокНаименованиеТовараРасширеннаяПодсказка" id="82"/>
+				</LabelField>
+				<LabelField name="СписокПроизводитель" id="23">
+					<DataPath>Список.Производитель</DataPath>
+					<ContextMenu name="СписокПроизводительКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СписокПроизводительРасширеннаяПодсказка" id="68"/>
+				</LabelField>
+				<LabelField name="СписокВидПродукции" id="26">
+					<DataPath>Список.ВидПродукции</DataPath>
+					<ContextMenu name="СписокВидПродукцииКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СписокВидПродукцииРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурМаркировка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Список" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.КонтурМаркировка_Товары</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПодборПроизводитель" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КонтурМаркировка_Организации</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьИзФайла" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзФайла</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьТовар" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать товар</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьТовар</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьТовар" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить товар</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьТовар</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьТоварыВСО" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть товары ВСО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть товары ВСО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьТоварыВСО</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузитьИзНоменклатуры1С" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из номенклатуры 1С</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создает новые товары для номенклатуры, информация по которой есть в национальном каталоге</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзНоменклатуры1С</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьИзНациональногоКаталога" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить из национального каталога</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновляет данные товаров из национального каталога</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьИзНациональногоКаталога</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьОтчетПоВиртуальномуСкладу" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по виртуальному складу</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьОтчетПоВиртуальномуСкладу</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗагрузитьПоДаннымДиадок" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить по данным Диадока</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить по данным диадок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьПоДаннымДиадок</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="РежимВыбора">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выполнение фоновых заданий (Контур.Маркировка)</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="НадписьРекомендуетсяОтдельныйСеанс" id="1">
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;fontsize 10&gt;Для выполнения фоновых заданий р&lt;/&gt;&lt;fontsize 10&gt;екомендуется открыть отдельный сеанс (окно программы).&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<BackColor>#FFFAD9</BackColor>
+			<ContextMenu name="НадписьРекомендуетсяОтдельныйСеансКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НадписьРекомендуетсяОтдельныйСеансРасширеннаяПодсказка" id="3"/>
+		</LabelDecoration>
+		<LabelDecoration name="НадписьНеПодходятУсловия" id="13">
+			<Visible>false</Visible>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;fontsize 10&gt;Выполнить фоновые задания можно только в файловой базе и платформе &lt;/&gt;&lt;fontsize 10&gt;версии &lt;/&gt;&lt;fontsize 10&gt;ниже &lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;8.3.5&lt;/&gt;&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<BackColor>#FBD4D4</BackColor>
+			<ContextMenu name="НадписьНеПодходятУсловияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="НадписьНеПодходятУсловияРасширеннаяПодсказка" id="15"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаИнтервал" id="19">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнтервалРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="ИнтервалОбработки" id="10">
+					<DataPath>ИнтервалОбработки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнять каждые (сек)</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ИнтервалОбработкиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ИнтервалОбработкиРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<LabelDecoration name="НадписьСтатусВыполнения" id="16">
+					<TextColor>web:Green</TextColor>
+					<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидание следующего выполнения...</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьСтатусВыполненияКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="НадписьСтатусВыполненияРасширеннаяПодсказка" id="18"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗапуститьПрервать" id="4">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа запустить прервать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗапуститьПрерватьРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<Button name="Кнопка_ЗапуститьВыполнениеЗаданий" id="8">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ЗапуститьВыполнениеЗаданий</CommandName>
+					<ExtendedTooltip name="Кнопка_ЗапуститьВыполнениеЗаданийРасширеннаяПодсказка" id="9"/>
+				</Button>
+				<Button name="Кнопка_ПрерватьВыполнениеЗаданий" id="6">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПрерватьВыполнениеЗаданий</CommandName>
+					<ExtendedTooltip name="Кнопка_ПрерватьВыполнениеЗаданийРасширеннаяПодсказка" id="7"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурМаркировка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ИнтервалОбработки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Save>
+				<Field>ИнтервалОбработки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СтатусОбработки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗапуститьВыполнениеЗаданий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить выполнение фоновых заданий</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗапуститьВыполнениеЗаданий</Action>
+		</Command>
+		<Command name="ПрерватьВыполнениеЗаданий" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прервать выполнение фоновых заданий</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПрерватьВыполнениеЗаданий</Action>
+		</Command>
+	</Commands>
+</Form>

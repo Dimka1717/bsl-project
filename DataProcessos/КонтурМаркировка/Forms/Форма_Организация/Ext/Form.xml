@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Организация (Контур.Маркировка)</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Кнопка_ЗаписатьИЗакрыть" id="18">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Записать и закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="Кнопка_ЗаписатьИЗакрытьРасширеннаяПодсказка" id="31"/>
+			</Button>
+			<Button name="Кнопка_ВыполнитьОбмен" id="59">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьОбмен</CommandName>
+				<Picture>
+					<xr:Abs>Picture.png</xr:Abs>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="Кнопка_ВыполнитьОбменРасширеннаяПодсказка" id="60"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСервисКонтурМаркировка" id="112">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сервис контур маркировка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСервисКонтурМаркировкаРасширеннаяПодсказка" id="113"/>
+			<ChildItems>
+				<LabelDecoration name="СсылкаНастройкиОрганизации" id="95">
+					<Width>26</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки организации в сервисе</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="СсылкаНастройкиОрганизацииКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="СсылкаНастройкиОрганизацииРасширеннаяПодсказка" id="97"/>
+					<Events>
+						<Event name="Click">СсылкаНастройкиОрганизацииНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаИнформацияОТарифе" id="114">
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>AlwaysHorizontal</Group>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИнформацияОТарифеРасширеннаяПодсказка" id="115"/>
+					<ChildItems>
+						<LabelDecoration name="СрокДействияТарифа" id="116">
+							<Width>26</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оплачен до</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ContextMenu name="СрокДействияТарифаКонтекстноеМеню" id="117"/>
+							<ExtendedTooltip name="СрокДействияТарифаРасширеннаяПодсказка" id="118"/>
+						</LabelDecoration>
+						<LabelDecoration name="СсылкаТариф" id="119">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тариф</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Hyperlink>true</Hyperlink>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ContextMenu name="СсылкаТарифКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="СсылкаТарифРасширеннаяПодсказка" id="121"/>
+							<Events>
+								<Event name="Click">СсылкаТарифНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРеквизиты" id="93">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<HorizontalAlign>Left</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>DontUse</ThroughAlign>
+			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="94"/>
+			<ChildItems>
+				<InputField name="Организация1С" id="12">
+					<DataPath>Организация1С</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ContextMenu name="Организация1СКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="Организация1СРасширеннаяПодсказка" id="32"/>
+					<Events>
+						<Event name="OnChange">Организация1СПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаИННКПП" id="10">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИННКППРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<InputField name="ИНН" id="4">
+							<DataPath>ИНН</DataPath>
+							<ContextMenu name="ИННКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="34"/>
+							<Events>
+								<Event name="OnChange">ИННПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="КПП" id="7">
+							<DataPath>КПП</DataPath>
+							<ContextMenu name="КППКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="КППРасширеннаяПодсказка" id="35"/>
+							<Events>
+								<Event name="OnChange">КПППриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Наименование" id="1">
+					<DataPath>Наименование</DataPath>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<UsualGroup name="ГруппаИдентификатор" id="25">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИдентификаторРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<InputField name="Идентификатор" id="22">
+							<DataPath>Идентификатор</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
+							<ContextMenu name="ИдентификаторКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ИдентификаторРасширеннаяПодсказка" id="39"/>
+							<Events>
+								<Event name="OnChange">ИдентификаторПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Button name="ПолучитьИдентификаторИзСервиса" id="27">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаполнитьИдентификаторИзСервиса</CommandName>
+							<ExtendedTooltip name="ПолучитьИдентификаторИзСервисаРасширеннаяПодсказка" id="40"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаИдентификаторGS1" id="105">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИдентификаторGS1РасширеннаяПодсказка" id="106"/>
+					<ChildItems>
+						<InputField name="ИдентификаторGS1" id="107">
+							<DataPath>ИдентификаторGS1</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
+							<ContextMenu name="ИдентификаторGS1КонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="ИдентификаторGS1РасширеннаяПодсказка" id="109"/>
+						</InputField>
+						<Button name="ЗаполнитьИдентификаторGS1ИзСервиса" id="110">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаполнитьИдентификаторGS1ИзСервиса</CommandName>
+							<ExtendedTooltip name="ЗаполнитьИдентификаторGS1ИзСервисаРасширеннаяПодсказка" id="111"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Комментарий" id="29">
+					<DataPath>Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="41"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбмен" id="91">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбменРасширеннаяПодсказка" id="92"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОбменССервисом" id="89">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обмен с сервисом</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаОбменССервисомРасширеннаяПодсказка" id="90"/>
+					<ChildItems>
+						<CheckBoxField name="РазрешитьОбмен" id="83">
+							<DataPath>РазрешитьОбмен</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РазрешитьОбменКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="РазрешитьОбменРасширеннаяПодсказка" id="85"/>
+							<Events>
+								<Event name="OnChange">РазрешитьОбменПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ДатаПоследнегоОбмена" id="86">
+							<DataPath>ДатаПоследнегоОбмена</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДатаПоследнегоОбменаКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ДатаПоследнегоОбменаРасширеннаяПодсказка" id="88"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЛентаСобытий" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лента событий</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаЛентаСобытийРасширеннаяПодсказка" id="48"/>
+					<ChildItems>
+						<InputField name="ГраницаЧтенияЛенты" id="49">
+							<DataPath>ГраницаЧтенияЛенты</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификатор последнего события ленты, которое было прочитано из сервиса.
+Либо дата, с которой будет продолжено чтение ленты.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
+							<ContextMenu name="ГраницаЧтенияЛентыКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ГраницаЧтенияЛентыРасширеннаяПодсказка" id="51"/>
+							<Events>
+								<Event name="OnChange">ГраницаЧтенияЛентыПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаОшибкаЧтенияЛенты" id="52">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибка чтения ленты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ошибка чтения ленты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаОшибкаЧтенияЛентыРасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПодсказкаОшибкиЧтенияЛенты" id="73">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодсказкаОшибкиЧтенияЛентыРасширеннаяПодсказка" id="74"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаПодсказки" id="70">
+											<Width>2</Width>
+											<Height>1</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<SkipOnInput>true</SkipOnInput>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="КартинкаПодсказкиКонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="КартинкаПодсказкиРасширеннаяПодсказка" id="72"/>
+										</PictureDecoration>
+										<LabelDecoration name="ТекстПодсказки" id="67">
+											<Enabled>false</Enabled>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<SkipOnInput>true</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При чтении ленты возникла ошибка</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ТекстПодсказкиКонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="ТекстПодсказкиРасширеннаяПодсказка" id="69"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ИдентификаторСобытияОшибкиЛенты" id="61">
+									<DataPath>ИдентификаторСобытияОшибкиЛенты</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>24</MaxWidth>
+									<ContextMenu name="ИдентификаторСобытияОшибкиЛентыКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ИдентификаторСобытияОшибкиЛентыРасширеннаяПодсказка" id="63"/>
+								</InputField>
+								<LabelDecoration name="СсылкаСброситьГраницуЧтенияЛентыНаОшибку" id="75">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сбросить границу чтения на момент перед ошибкой</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="СсылкаСброситьГраницуЧтенияЛентыНаОшибкуКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="СсылкаСброситьГраницуЧтенияЛентыНаОшибкуРасширеннаяПодсказка" id="77"/>
+									<Events>
+										<Event name="Click">СсылкаСброситьГраницуЧтенияЛентыНаОшибкуНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="РазрешитьЧтениеВходящихУПД" id="80">
+							<DataPath>РазрешитьЧтениеВходящихУПД</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РазрешитьЧтениеВходящихУПДКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="РазрешитьЧтениеВходящихУПДРасширеннаяПодсказка" id="82"/>
+							<Events>
+								<Event name="OnChange">РазрешитьЧтениеВходящихУПДПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="РазрешитьЧтениеУведомленийОПриемке" id="100">
+							<DataPath>РазрешитьЧтениеУведомленийОПриемке</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РазрешитьЧтениеУведомленийОПриемкеКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="РазрешитьЧтениеУведомленийОПриемкеРасширеннаяПодсказка" id="102"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="132">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурМаркировка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Ссылка" id="134">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КонтурМаркировка_Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИНН" id="127">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>12</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="КПП" id="128">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КПП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>12</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Организация1С" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация 1С</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Комментарий" id="130">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Наименование" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Идентификатор" id="125">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор в сервисе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ГраницаЧтенияЛенты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Граница чтения ленты (UTC)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>24</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторСобытияОшибкиЛенты" id="124">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор события с ошибкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>24</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГраницаОшибкиЧтенияЛенты" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Граница ошибки чтения ленты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>24</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешитьЧтениеВходящихУПД" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить загрузку входящих УПД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РазрешитьОбмен" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить обмен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДатаПоследнегоОбмена" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата последнего обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешитьЧтениеУведомленийОПриемке" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить загрузку уведомлений о приемке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИдентификаторGS1" id="129">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор в GS1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТипКлючаОрганизации1С" id="122">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип ключа организации 1С</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыполненаНастройка" id="123">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнена настройка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="131">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+		</Command>
+		<Command name="ЗаполнитьИдентификаторИзСервиса" id="133">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить из сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить идентификатор из сервиса Контур.Маркировка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьИдентификаторИзСервиса</Action>
+		</Command>
+		<Command name="ВыполнитьОбмен" id="126">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен с сервисом</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен с сервисом Контур.Маркировка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьОбменССервисом</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьИдентификаторGS1ИзСервиса" id="135">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить из сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить идентификатор GS-1 из сервиса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьИдентификаторGS1ИзСервиса</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Ссылка">
+			<Type>
+				<v8:Type>cfg:CatalogRef.КонтурМаркировка_Организации</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>
