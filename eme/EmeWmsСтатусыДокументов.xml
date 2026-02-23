@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Enum uuid="ffcd7028-1621-4db3-860e-73c86eb5bb55">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.EmeWmsСтатусыДокументов" category="Ref">
+				<xr:TypeId>f2bacc93-1a53-41b0-adcf-2d7ccd2a35d4</xr:TypeId>
+				<xr:ValueId>f3c86e39-916f-49a1-878b-884d2d994c67</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.EmeWmsСтатусыДокументов" category="Manager">
+				<xr:TypeId>b9fd56cc-494e-434d-b100-6bc61eef0a57</xr:TypeId>
+				<xr:ValueId>5db29b00-4ae2-4f83-80b1-ee70944d6319</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.EmeWmsСтатусыДокументов" category="List">
+				<xr:TypeId>aa698f4a-d753-436a-8cc6-13d15ed4b77a</xr:TypeId>
+				<xr:ValueId>e8803e68-a2d5-45be-9103-44a739100cdd</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>EmeWmsСтатусыДокументов</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Eme wms статусы документов</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Статусы документов EME.WMS</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<StandardAttributes>
+				<xr:StandardAttribute name="Order">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:TypeReductionMode>TransformValues</xr:TypeReductionMode>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Ref">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:TypeReductionMode>TransformValues</xr:TypeReductionMode>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+			</StandardAttributes>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="4da092a3-5f0f-46f6-ac4e-a3ab8f83d1d5">
+				<Properties>
+					<Name>Undefined</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Undefined</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Не определен</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6fbbd4f1-2f8c-43b1-8936-622f083d3635">
+				<Properties>
+					<Name>New</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>New</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Новый (0)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c9b11417-6655-4d74-b22d-45755b62fa92">
+				<Properties>
+					<Name>Created</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Created</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Присвоен номер (1)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="08f72e6a-f3a0-40cd-af31-ba8324661b94">
+				<Properties>
+					<Name>Filled</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Filled</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Заполняется (2)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d44185fd-c1a4-4297-81c4-0b113d0d2e45">
+				<Properties>
+					<Name>Loading</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Loading</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Обрабатывается (3)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4cd1a60f-4bd3-4ce4-95a0-dc2297f58199">
+				<Properties>
+					<Name>Loaded</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Loaded</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Все строки обработаны (4)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="79871dd6-ef3a-42d3-a056-bf4bc1098220">
+				<Properties>
+					<Name>Closed</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Closed</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Обработка завершена (5)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="539f2917-8441-491d-89be-e9c87625f4ec">
+				<Properties>
+					<Name>Exporting</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Exporting</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Экспортируется (6)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="50f9229f-d8f4-43c2-a4de-3e8ecff8cb0f">
+				<Properties>
+					<Name>ExportPutOff</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Export put off</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Экспорт отложен (7)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="afa51a4d-0d39-47df-9bde-747958608321">
+				<Properties>
+					<Name>PutAwayed</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Put awayed</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Размещается (8)</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>
